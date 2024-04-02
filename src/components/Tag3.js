@@ -9,7 +9,7 @@ import image1 from '../images/cat_no_bg.png';
 const Tag3 = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentTag, setCurrentTag] = useState(null);
-  const [buttonText, setButtonText] = useState('Open Modal');
+  const [buttonText, setButtonText] = useState('Open Modal 3');
   const [showLoadedText, setShowLoadedText] = useState(false);
 
   const openModal = (tag) => {
@@ -30,7 +30,7 @@ const Tag3 = () => {
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };
 
   return (
-    <Box id="tagSection">
+    <Box backgroundColor = "brown" id="tagSection">
       <Box key="tag1" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
         <Box textAlign="center">
           <img src={tag.imageSrc} alt="Tag Image" />
