@@ -8,7 +8,7 @@ import image2 from '../images/cat_no_bg.png';
 import image3 from '../images/cat_no_bg.png';
 
 const tagsData = {
-  tag1: { imageSrc: image1, description: 'Description for Tag 1' },
+  tag1: { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!' },
   tag2: { imageSrc: image2, description: 'Description for Tag 2' },
   tag3: { imageSrc: image3, description: 'Description for Tag 3' }
 };
@@ -23,7 +23,7 @@ const Tag = () => {
   };
 
   return (
-    <>
+    <Box id="tagSection">
       {Object.keys(tagsData).map((tagKey) => {
         const tag = tagsData[tagKey];
         return (
@@ -42,7 +42,7 @@ const Tag = () => {
       <Modal isCentered onClose={onClose} isOpen={isOpen} motionPreset='slideInBottom'>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Tag Description</ModalHeader>
+          <ModalHeader>YOU FIRED TAG!</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box textAlign="center">
@@ -59,7 +59,7 @@ const Tag = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 
