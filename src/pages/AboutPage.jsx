@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Tag from '../components/Tag';
 import Tag2 from '../components/Tag2';
 import Tag3 from '../components/Tag3';
+import Loading from '../components/Loading';
 import Container from '../components/Container';
 import StatusIndicator from '../components/StatusIndicator';
 import Tag1 from '../components/Tag1';
@@ -25,6 +26,9 @@ function AboutPage() {
         </Container>
         <Container>
           <Tag3 />
+        </Container>
+        <Container>
+          <Loading />
         </Container>
         <Container>
           <StatusIndicator />
