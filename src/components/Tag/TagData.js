@@ -1,10 +1,16 @@
 // TagData.js
 import image1 from '../../images/code.svg';
+import image2 from '../../images/ganalytics.svg';
+import image3 from '../../images/gtagmanager.svg';
 
 const TagData = {
-  imageSrc: image1,
+  imageSrcCard: image1,
+  imageSrcModal: image2,
+  imageSrcModal2: image3,
   description: 'GTM tag was fired bitch!!!!!',
-  category: 'Analytics'
+  // category: 'Analytics'
+  successInfo: 'Wow you did it bitch!',
+  additionalInfo: 'It is like this and like that and it is awesome bro!'
 };
 
 export default TagData;

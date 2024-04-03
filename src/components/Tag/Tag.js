@@ -48,7 +48,7 @@ const Tag = () => {
     <Box backgroundColor="orange" id="tagSection">
       <Box key="tag1" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
         <Box textAlign="center">
-          <img src={tag.imageSrc} alt="Tag Image" />
+          <img src={tag.imageSrcCard} alt="Tag Image" />
         </Box>
         <Box p="4">
           <TagLoadButton onClick={() => openModal(tag)} props={props}/>
