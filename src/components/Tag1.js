@@ -1,10 +1,5 @@
 // Tag1.js
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Box, Button, Modal, ModalOverlay, useDisclosure } from '@chakra-ui/react'; // Importe useDisclosure
-import ModalContent from './ModalContent'; // Importando o componente ModalContent
-import image1 from '../images/cat_no_bg.png';
-=======
 import { Box, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure, Flex, Text, Spacer, Input, Textarea } from '@chakra-ui/react';
 import { InfoIcon, InfoOutlineIcon, CheckCircleIcon, WarningIcon, QuestionIcon } from '@chakra-ui/icons'; // Importing Chakra UI icons
 import StatusIndicator from './StatusIndicator'; // Importing the StatusIndicator component
@@ -14,16 +9,10 @@ import ConfettiComponent from './Confetti';
 
 // Importing images
 import image1 from '../images/code.svg';
->>>>>>> a1eae82e1a06f95628c2ad33aaaaba34f6dea9da
 
 const Tag1 = () => {
   const { isOpen, onOpen, onClose } = useDisclosure(); // Corrija a importação de useDisclosure
   const [currentTag, setCurrentTag] = useState(null);
-<<<<<<< HEAD
-
-  const openModal = (tag) => {
-    setCurrentTag(tag);
-=======
   const [colorChanged, setColorChanged] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
   const props = useSpring({ width: colorChanged ? 200 : 0 });
@@ -31,7 +20,6 @@ const Tag1 = () => {
   const openModal = (tag) => {
     setCurrentTag(tag);
     setAnimationStarted(false);
->>>>>>> a1eae82e1a06f95628c2ad33aaaaba34f6dea9da
     onOpen();
   };
 
@@ -49,11 +37,7 @@ const Tag1 = () => {
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };
 
   return (
-<<<<<<< HEAD
-    <Box id="tagSection">
-=======
     <Box backgroundColor="orange" id="tagSection">
->>>>>>> a1eae82e1a06f95628c2ad33aaaaba34f6dea9da
       <Box key="tag1" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
         <Box textAlign="center">
           <img src={tag.imageSrc} alt="Tag Image" />
@@ -63,25 +47,15 @@ const Tag1 = () => {
             onClick={() => openModal(tag)}
             className={styles.main}
           >
-<<<<<<< HEAD
-            Open Modal
-=======
             <animated.div className={styles.fill} style={props} />
             <animated.div className={styles.content}>
               {props.width.to(x => (x === 0 ? 'Start' : x === 200 ? 'Finish' : ''))}
             </animated.div>
->>>>>>> a1eae82e1a06f95628c2ad33aaaaba34f6dea9da
           </Button>
         </Box>
       </Box>
       <Modal isCentered onClose={handleModalClose} isOpen={isOpen} motionPreset='slideInBottom'>
         <ModalOverlay />
-<<<<<<< HEAD
-        <ModalContent
-          currentTag={currentTag}
-          handleModalClose={handleModalClose}
-        />
-=======
         <ModalContent>
           <ModalHeader>
             <Flex align="center">
@@ -121,7 +95,6 @@ const Tag1 = () => {
             </Button>
           </ModalFooter>
         </ModalContent>
->>>>>>> a1eae82e1a06f95628c2ad33aaaaba34f6dea9da
       </Modal>
 
       {animationStarted && (
