@@ -4,6 +4,7 @@ import { InfoIcon, InfoOutlineIcon, CheckCircleIcon, WarningIcon, QuestionIcon }
 import StatusIndicator from './StatusIndicator'; // Importing the StatusIndicator component
 import { useSpring, animated } from '@react-spring/web';
 import styles from './styles.module.css';
+import ConfettiComponent from './Confetti';
 
 // Importing images
 import image1 from '../images/code.svg';
@@ -13,7 +14,7 @@ const Tag1 = () => {
   const [currentTag, setCurrentTag] = useState(null);
   const [colorChanged, setColorChanged] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
-  const props = useSpring({ width: colorChanged ? 100 : 0 });
+  const props = useSpring({ width: colorChanged ? 200 : 0 });
 
   const openModal = (tag) => {
     setCurrentTag(tag);
@@ -27,6 +28,11 @@ const Tag1 = () => {
     setColorChanged(true);
   };
 
+  const handleAnimationFinish = () => {
+    // Handle actions after animation finishes, like showing confetti
+    console.log('Animation finished! Show confetti here...');
+  };
+
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };
 
   return (
@@ -35,13 +41,14 @@ const Tag1 = () => {
         <Box textAlign="center">
           <img src={tag.imageSrc} alt="Tag Image" />
         </Box>
-        <Box p="4">
+        <Box p="4" className={styles.container}>
           <Button
             onClick={() => openModal(tag)}
             className={styles.main}
           >
-            <animated.div style={props} className={styles.fill}>
-              {props.width.to(x => (x === 0 ? 'Start' : x === 100 ? 'Finish' : ''))}
+            <animated.div className={styles.fill} style={props} />
+            <animated.div className={styles.content}>
+              {props.width.to(x => (x === 0 ? 'Start' : x === 200 ? 'Finish' : ''))}
             </animated.div>
           </Button>
         </Box>
@@ -88,6 +95,11 @@ const Tag1 = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
+
+      {animationStarted && (
+        <ConfettiComponent onFinish={handleAnimationFinish} />
+      )}
+
     </Box>
   );
 };
