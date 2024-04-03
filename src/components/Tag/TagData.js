@@ -1,5 +1,5 @@
 // TagData.js
-import image1 from '../../images/cat_no_bg.png';
+import image1 from '../../images/code.svg';
 
 const TagData = {
   imageSrc: image1,

@@ -51,7 +51,7 @@ const Tag = () => {
           <img src={tag.imageSrc} alt="Tag Image" />
         </Box>
         <Box p="4">
-          <TagLoadButton onClick={() => openModal(tag)} />
+          <TagLoadButton onClick={() => openModal(tag)} props={props}/>
         </Box>
       </Box>
       <TagModal
