@@ -5,6 +5,8 @@ import StatusIndicator from './StatusIndicator'; // Importing the StatusIndicato
 import { useSpring, animated } from '@react-spring/web';
 import styles from './styles.module.css';
 import ConfettiComponent from './Confetti';
+import { animateScroll as scroll } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 // Importing images
 import image1 from '../images/code.svg';
@@ -31,6 +33,16 @@ const Tag1 = () => {
   const handleAnimationFinish = () => {
     // Handle actions after animation finishes, like showing confetti
     console.log('Animation finished! Show confetti here...');
+
+    // Scroll to Tag2 after animation finishes
+    setTimeout(() => {
+      console.log('Scrolling to Tag2...');
+      scroller.scrollTo('tag2Section', {
+        duration: 500,
+        smooth: true,
+        offset: 0 // Adjust the offset as needed to accommodate any fixed header
+      });
+    }, 3000); // Scroll after 3 seconds
   };
 
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };

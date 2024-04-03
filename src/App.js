@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage'; // Importando a página AboutPage
+import Contact from './pages/Contact'; 
 import Container from './components/Container';
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
           </Box>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} /> {/* Adicionando a rota para a página AboutPage */}
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Adicionando a rota para a página AboutPage */}
             {/* Add other routes here */}
           </Routes>
           <Box bg="gray.100">
