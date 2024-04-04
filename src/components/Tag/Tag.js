@@ -8,7 +8,7 @@ import TagLoadButton from './TagLoadButton';
 import TagModal from './TagModal';
 import TagConfetti from './TagConfetti';
 
-const Tag = () => {
+const Tag = ({id}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentTag, setCurrentTag] = useState(null);
   const [colorChanged, setColorChanged] = useState(false);
@@ -42,11 +42,11 @@ const Tag = () => {
     }, 3000); // Scroll after 3 seconds
   };
 
-  const tag = TagData;
+  const tag = TagData.find(tag => tag.id === id);
 
   return (
-    <Box backgroundColor="orange" id="tagSection">
-      <Box key="tag1" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
+    <Box backgroundColor="orange" id={`tag${id}Section`}>
+      <Box key={`tag${id}`} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
         <Box textAlign="center">
           <img src={tag.imageSrcCard} alt="Tag Image" />
         </Box>
