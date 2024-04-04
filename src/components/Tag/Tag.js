@@ -61,7 +61,14 @@ const Tag = () => {
         props={props}
         handleAnimationFinish={handleAnimationFinish}
       />
-      <TagConfetti animationStarted={animationStarted} />
+
+
+      {/* <TagConfetti animationStarted={animationStarted} /> */}
+
+      {animationStarted && (
+        <TagConfetti onFinish={handleAnimationFinish} />
+      )}
+      
     </Box>
   );
 };
