@@ -62,8 +62,25 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 const MenuLinks = ({ isOpen }) => {
   return (
     <Box
-      display={{ base: isOpen ? "block" : "none", md: "block" }}
-      flexBasis={{ base: "100%", md: "auto" }}
+    display={{ base: isOpen ? "block" : "none", md: "block" }}
+    position={{ base: "absolute", md: "static" }}
+    top="100%" // Place the menu below the navbar
+    left="0"
+    // bg="white"
+    w={{ base: "100%", md: "auto" }}
+    m={0}
+    // mt={{ base: "0", md: "4" }} // Add margin top to prevent overlapping
+    pt={{ base: "2", md: "4" }} // Add padding to the menu items
+    pb={5}
+    px={8}
+    pe={{ base: "8", lg: "0" }}
+    zIndex="99" // Ensure menu is above other content    
+    bg={{ base: "rgba(255, 255, 255, 0.85)", md: "none" }} // Semi-transparent white background
+    backdropFilter={{ base: "blur(10px)", md: "none" }}
+    
+    
+      // display={{ base: isOpen ? "block" : "none", md: "block" }}
+      // flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
         spacing={8}
@@ -103,11 +120,11 @@ const NavBarContainer = ({ children, ...props }) => {
       wrap="wrap"
       w="100%"
       maxW="container.xl"
-      position="fixed" // Add position fixed here
-      top="0" // Stick the navbar to the top of the viewport
+      // position="fixed" // Add position fixed here
+      // top="0" // Stick the navbar to the top of the viewport
       zIndex="100"
-      mb={8}
-      p={8}
+      // mb={8}
+      p={[6, 8, 6, 6]}
       bg="rgba(255, 255, 255, 0.5)"
       backdropFilter="blur(20px)" 
       color={"black"}
