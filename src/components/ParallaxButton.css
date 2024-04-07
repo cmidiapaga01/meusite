@@ -1,0 +1,52 @@
+/* ParallaxButton.css */
+#logo-box {
+    text-align: center;
+    color: #fff;
+  }
+  
+  #logo-box h1 {
+    font-size: 2.5em; /* Ajuste conforme necessário */
+    margin: 0;
+    padding: 0;
+  }
+  
+  #logo-box h1 .alpha-label {
+    font-size: 0.5em;
+    margin-left: 10px;
+    vertical-align: super;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+  }
+  
+  #logo-box h2 {
+    font-size: 1.5em; /* Ajuste conforme necessário */
+    margin: 0.5em 0;
+  }
+  
+  .m-t-1 {
+    margin-top: 1em;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Azul por padrão, ajuste conforme necessário */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none; /* Removendo borda para manter o design limpo */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-play.btn-large {
+    padding: 1em 1.5em;
+    font-size: 1.25em;
+  }
+  

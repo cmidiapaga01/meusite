@@ -8,10 +8,14 @@ import Loading from '../components/Loading';
 import Container from '../components/Container';
 import StatusIndicator from '../components/StatusIndicator';
 import Tag1 from '../components/Tag1';
+import FacebookPixel from '../components/FacebookPixel';
+import Parallax from '../components/Parallax'; // Importe o componente Parallax
 
 function AboutPage() {
   return (
-    <Box minH="100vh">
+    <Box minH="100vh" display="flex" flexDirection="column">
+      {/* <FacebookPixel /> */}
+      <Parallax style={{ flex: 1 }} /> {/* Utilize o componente Parallax aqui e defina flex: 1 para ocupar todo o espaço disponível */}
       <Box bg="blue.200">
         <Container>
           <Hero />
@@ -25,7 +29,7 @@ function AboutPage() {
           <Tag2 />
         </Container>
         <Container>
-          <Tag3 />
+          {/* <Tag3 /> */}
         </Container>
         <Container>
           <Loading />

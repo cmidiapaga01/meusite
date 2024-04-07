@@ -1,0 +1,19 @@
+.container-body {
+    height: 9000px;
+  }
+  .bg-container {
+    position: relative;
+    width: 90% !important;
+    height: 450px;
+    margin: auto;
+    margin-bottom: 20%;
+    margin-top: 20%;
+  }
+  .bg-container h1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 350px;
+    font-size: 70px;
+  }

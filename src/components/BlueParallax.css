@@ -1,0 +1,31 @@
+/* BlueParallax.css */
+#maincontain {
+    width: 100%;
+    overflow: hidden; /* Isso pode ajudar a prevenir problemas de overflow com imagens parallax */
+  }
+  
+  /* Estilização para garantir que as camadas parallax preencham a tela */
+  .parallax-container div {
+    height: 500px; /* Altura de placeholder, ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Cor de texto exemplo */
+    text-align: center;
+    font-size: 2em; /* Tamanho de fonte exemplo */
+  }
+  
+  /* Estilização adicional conforme necessário para o conteúdo dentro das camadas */
+  .content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Exemplo de fundo para melhorar a legibilidade do texto */
+    border-radius: 10px;
+  }
+  
+  /* Ajustes para responsividade ou estilizações específicas para mobile */
+  @media (max-width: 768px) {
+    .parallax-container div {
+      font-size: 1.5em; /* Tamanho de fonte ajustado para dispositivos móveis */
+    }
+  }
+  
