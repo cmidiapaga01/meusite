@@ -111,8 +111,13 @@
 
 import React, { useState } from 'react';
 import { Box, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure, Flex, Text, Spacer, Input, Textarea } from '@chakra-ui/react';
-import { InfoIcon, InfoOutlineIcon, CheckCircleIcon, WarningIcon, QuestionIcon } from '@chakra-ui/icons'; // Importando ícones do Chakra UI
-import StatusIndicator from './StatusIndicator'; // Importando o componente StatusIndicator
+import { InfoIcon, InfoOutlineIcon, CheckCircleIcon, WarningIcon, QuestionIcon } from '@chakra-ui/icons'; // Importing Chakra UI icons
+import StatusIndicator from './StatusIndicator'; // Importing the StatusIndicator component
+import { useSpring, animated } from '@react-spring/web';
+import styles from './styles.module.css';
+import ConfettiComponent from './Confetti';
+import { animateScroll as scroll } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 // Importando imagens
 import image1 from '../images/code.svg';
@@ -136,6 +141,23 @@ const Tag1 = () => {
       setButtonText('CARREGADO'); // Animar o texto para "CARREGADO"
     }, 50);
     onClose();
+    setAnimationStarted(true);
+    setColorChanged(true);
+  };
+
+  const handleAnimationFinish = () => {
+    // Handle actions after animation finishes, like showing confetti
+    console.log('Animation finished! Show confetti here...');
+
+    // Scroll to Tag2 after animation finishes
+    setTimeout(() => {
+      console.log('Scrolling to Tag2...');
+      scroller.scrollTo('tag2Section', {
+        duration: 500,
+        smooth: true,
+        offset: 0 // Adjust the offset as needed to accommodate any fixed header
+      });
+    }, 3000); // Scroll after 3 seconds
   };
 
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };

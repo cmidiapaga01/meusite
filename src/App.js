@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import AboutPage from './pages/AboutPage'; // Importando a página AboutPage
+import Contact from './pages/Contact'; 
 import Container from './components/Container';
 import MalbaPage from './pages/MalbaPage'; // A
 // Importe a biblioteca react-gtm-module
@@ -55,8 +56,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            {/* Adicione outras rotas conforme necessário */}
-            <Route path="/malba" element={<MalbaPage />} /> {/* Nova rota para MalbaPage */}
+            <Route path="/contact" element={<Contact />} />
+            {/* Adicionando a rota para a página AboutPage */}
+            {/* Add other routes here */}
           </Routes>
           <Box bg="gray.100">
             <Container>
