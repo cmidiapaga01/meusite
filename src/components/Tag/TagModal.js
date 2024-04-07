@@ -29,7 +29,7 @@ const TagModal = ({ isOpen, onClose, currentTag }) => {
         <ModalCloseButton />
         <ModalBody>
           <Box textAlign="center">
-            <StatusIndicator /> {/* Reintegrating the StatusIndicator */}
+            <StatusIndicator currentTag={tag} /> {/* Reintegrating the StatusIndicator */}
           </Box>
           {/* Descriptive information about the tag */}
           <Flex flexDirection="column" mt="4" alignItems="start">

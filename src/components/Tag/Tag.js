@@ -1,6 +1,6 @@
 // Tag.js
 import React, { useState } from 'react';
-import { Box, Button, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, useDisclosure, Image } from '@chakra-ui/react';
 import { useSpring, animated } from '@react-spring/web';
 import { Element, scroller } from 'react-scroll';
 import TagData from './TagData';
@@ -8,7 +8,7 @@ import TagLoadButton from './TagLoadButton';
 import TagModal from './TagModal';
 import TagConfetti from './TagConfetti';
 
-const Tag = ({id}) => {
+const Tag = ({id, paddingTop, paddingBottom}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [currentTag, setCurrentTag] = useState(null);
   const [colorChanged, setColorChanged] = useState(false);
@@ -33,22 +33,25 @@ const Tag = ({id}) => {
 
     // Scroll to Tag2 after animation finishes
     setTimeout(() => {
-      console.log('Scrolling to Tag2...');
-      scroller.scrollTo('tag2Section', {
+      if (id !== TagData.length) {
+      console.log('Scrolling to next card :)');
+      const nextId = id + 1;
+      const nextSection = `tag${nextId}Section`;
+      scroller.scrollTo(nextSection, {
         duration: 500,
         smooth: true,
         offset: 0 // Adjust the offset as needed to accommodate any fixed header
       });
-    }, 3000); // Scroll after 3 seconds
+    }}, 3000); // Scroll after 3 seconds
   };
 
   const tag = TagData.find(tag => tag.id === id);
 
   return (
-    <Box backgroundColor="orange" id={`tag${id}Section`}>
-      <Box key={`tag${id}`} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
-        <Box textAlign="center">
-          <img src={tag.imageSrcCard} alt="Tag Image" />
+    <Box backgroundColor="gray.200" id={`tag${id}Section`} display="flex" justifyContent="center" paddingTop={paddingTop} paddingBottom={paddingBottom}>
+      <Box key={`tag${id}`} maxW="sm" backgroundColor="gray.50" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="7">
+        <Box textAlign="center" display="flex" justifyContent="center">
+          <Image src={tag.imageSrcCard} alt="Tag Image" maxWidth="60%" marginTop={12} />
         </Box>
         <Box p="4">
           <TagLoadButton onClick={() => openModal(tag)} props={props}/>

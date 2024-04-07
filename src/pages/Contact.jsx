@@ -17,9 +17,9 @@ function Contact() {
       </Box>
       <Box bg="green.200">
         <Container>
-          <Tag id={1} /> {/* Rendering the Tag component with id 1 */}
+          <Tag id={1} paddingTop='4rem' /> {/* Rendering the Tag component with id 1 */}
           <Tag id={2} /> {/* Rendering the Tag component with id 2 */}
-          <Tag id={3} /> {/* Rendering the Tag component with id 3 */}
+          <Tag id={3} paddingBottom='4rem'  /> {/* Rendering the Tag component with id 3 */}
         </Container>
         {/* <Container>
           <Loading />
