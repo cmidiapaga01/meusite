@@ -13,7 +13,7 @@ function App() {
     <ChakraProvider>
       <Router>
         <Box minH="100vh">
-          <Box bg="gray.100">
+          <Box bg="gray.300">
             <Container>
               <Navbar />
             </Container>
