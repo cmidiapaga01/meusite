@@ -1,8 +1,7 @@
-// Tag.js
 import React, { useState } from 'react';
-import { Box, Button, useDisclosure, Image } from '@chakra-ui/react';
-import { useSpring, animated } from '@react-spring/web';
-import { Element, scroller } from 'react-scroll';
+import { Box, useDisclosure, Image } from '@chakra-ui/react';
+import { useSpring } from '@react-spring/web';
+import { scroller } from 'react-scroll';
 import TagData from './TagData';
 import TagLoadButton from './TagLoadButton';
 import TagModal from './TagModal';
@@ -65,9 +64,6 @@ const Tag = ({id, paddingTop, paddingBottom}) => {
         handleAnimationFinish={handleAnimationFinish}
       />
 
-
-      {/* <TagConfetti animationStarted={animationStarted} /> */}
-
       {animationStarted && (
         <TagConfetti onFinish={handleAnimationFinish} />
       )}
@@ -77,38 +73,3 @@ const Tag = ({id, paddingTop, paddingBottom}) => {
 };
 
 export default Tag;
-
-
-
-// // Tag.js
-// import React from 'react';
-// import { Box } from '@chakra-ui/react';
-// import tagData from './TagData'; // Importing the TagData component
-// import TagLoadButton from './TagLoadButton'; // Importing the TagLoadButton component
-
-// const Tag = ({ onClick }) => {
-//   // TagData.js
-// const tagData = {
-//     imageSrc: '../../images/cat_no_bg.png', // Replace with the actual path to your image
-//     description: 'GTM tag was fired bitch!!!!!',
-//     category: 'Analytics'
-//   };
-
-//   const handleClick = () => {
-//     // Handle button click
-//     onClick();
-//   };
-
-//   return (
-//     <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
-//       <Box textAlign="center">
-//         <image src={Tag.imageSrc} alt="Tag Image" />
-//       </Box>
-//       <Box p="4">
-//         <TagLoadButton onClick={handleClick} />
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Tag;

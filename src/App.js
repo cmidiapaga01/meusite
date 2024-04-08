@@ -22,7 +22,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<Contact />} />
-            {/* Adicionando a rota para a página AboutPage */}
             {/* Add other routes here */}
           </Routes>
           <Box bg="gray.100">

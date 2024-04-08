@@ -1,11 +1,8 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import Hero from '../components/Hero';
-import Tag from '../components/Tag/Tag'; // Importing the Tag component from the Tag folder
-import Loading from '../components/Loading';
+import Tag from '../components/Tag/Tag'; 
 import Container from '../components/Container';
-import StatusIndicator from '../components/StatusIndicator';
-import TagLoadButton from '../components/Tag/TagLoadButton'; // Importing the TagLoadButton component from the Tag folder
 
 function Contact() {
   return (
@@ -21,12 +18,6 @@ function Contact() {
           <Tag id={2} /> {/* Rendering the Tag component with id 2 */}
           <Tag id={3} paddingBottom='4rem'  /> {/* Rendering the Tag component with id 3 */}
         </Container>
-        {/* <Container>
-          <Loading />
-        </Container>
-        <Container>
-          <StatusIndicator />
-        </Container> */}
       </Box>
     </Box>
   );
