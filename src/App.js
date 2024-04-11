@@ -19,7 +19,7 @@ function App() {
             </Container>
           </Box>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Contact />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<Contact />} />
             {/* Add other routes here */}
