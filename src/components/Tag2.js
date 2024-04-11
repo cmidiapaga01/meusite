@@ -30,7 +30,7 @@ const Tag2 = () => {
   const tag = { imageSrc: image1, description: 'GTM tag was fired bitch!!!!!', category: 'Analytics' };
 
   return (
-    <Box backgroundColor = "pink" id="tagSection">
+    <Box backgroundColor = "pink" id="tag2Section">
       <Box key="tag1" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="md" m="2">
         <Box textAlign="center">
           <img src={tag.imageSrc} alt="Tag Image" />

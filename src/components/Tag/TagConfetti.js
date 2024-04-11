@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Confetti from "react-confetti";
 
-const ConfettiComponent = ({ onFinish }) => {
+const TagConfetti = ({ onFinish }) => {
   useEffect(() => {
     if (onFinish) {
       setTimeout(() => {
@@ -27,4 +27,5 @@ const ConfettiComponent = ({ onFinish }) => {
   );
 };
 
-export default ConfettiComponent;
+export default TagConfetti;
+
