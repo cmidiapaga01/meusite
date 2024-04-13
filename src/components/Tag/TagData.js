@@ -11,6 +11,7 @@ const TagData = [
   description: 'GTM tag was fired bitch!!!!!',
   successInfo: 'Wow you did it bitch!',
   additionalInfo: 'It is like this and like that and it is awesome bro!'
+  
 },
 
 {
