@@ -9,7 +9,7 @@ const Navbar = (props) => {
   return (
     <NavBarContainer {...props}>
       <Text w="100px" color={"black"}>
-        Theozinho
+        Teste
       </Text>
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
