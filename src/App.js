@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ChakraProvider, Box } from '@chakra-ui/react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import TagManager from 'react-gtm-module';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage'; // Importando a página AboutPage
-import Contact from './pages/Contact'; 
+import AboutPage from './pages/AboutPage';
+import Contact from './pages/Contact';
 import Container from './components/Container';
 
 function App() {
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-T9SWNVC'
+    };
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <ChakraProvider>
       <Router>
