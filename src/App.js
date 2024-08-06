@@ -12,7 +12,7 @@ import Container from './components/Container';
 function App() {
   useEffect(() => {
     const tagManagerArgs = {
-      gtmId: 'GTM-T9SWNVC'
+      gtmId: 'GTM-MZBZQDJ5'
     };
     TagManager.initialize(tagManagerArgs);
   }, []);
